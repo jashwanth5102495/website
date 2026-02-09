@@ -66,6 +66,23 @@ export function ProductDetail() {
                 </span>
               </div>
             </div>
+            {/* Recommended Dosage */}
+            {product.usage && product.usage.length > 0 && (
+              <div className="mt-6">
+                <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-3 flex items-center">
+                  <Shield className="w-5 h-5 text-green-600 mr-2" />
+                  Recommended Dosage
+                </h3>
+                <ul className="space-y-2">
+                  {product.usage.map((item, index) => (
+                    <li key={index} className="flex items-start">
+                      <div className="w-2 h-2 bg-green-500 rounded-full mr-3 mt-2 flex-shrink-0" />
+                      <span className="text-gray-700 dark:text-gray-300">{item}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            )}
           </motion.div>
 
           {/* Product Details */}
@@ -82,11 +99,11 @@ export function ProductDetail() {
 
 
 
-            {/* Product Description & Benefits */}
+            {/* Product Description */}
             <div>
               <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-3 flex items-center">
                 <Info className="w-5 h-5 text-green-600 mr-2" />
-                Product Description & Benefits
+                Product Description
               </h3>
               <div className="prose prose-sm dark:prose-invert max-w-none">
                 <div className="text-gray-700 dark:text-gray-300 leading-relaxed whitespace-pre-line">
@@ -94,6 +111,58 @@ export function ProductDetail() {
                 </div>
               </div>
             </div>
+
+            {/* Benefits */}
+            {product.features && product.features.length > 0 && (
+              <div>
+                <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-3 flex items-center">
+                  <Leaf className="w-5 h-5 text-green-600 mr-2" />
+                  Benefits
+                </h3>
+                <ul className="space-y-2">
+                  {product.features.map((feature, index) => (
+                    <li key={index} className="flex items-start">
+                      <CheckCircle className="w-5 h-5 text-green-500 mr-2 flex-shrink-0 mt-0.5" />
+                      <span className="text-gray-700 dark:text-gray-300">{feature}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            )}
+
+
+
+            {/* Composition */}
+            {product.ingredients && product.ingredients.length > 0 && (
+              <div>
+                <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-3 flex items-center">
+                  <Star className="w-5 h-5 text-green-600 mr-2" />
+                  Composition
+                </h3>
+                <div className="bg-green-50 dark:bg-green-900/20 p-4 rounded-xl border border-green-100 dark:border-green-800">
+                   <ul className="space-y-1">
+                    {product.ingredients.map((item, index) => (
+                      <li key={index} className="text-gray-700 dark:text-gray-300 font-medium">
+                        {item}
+                      </li>
+                    ))}
+                   </ul>
+                </div>
+              </div>
+            )}
+
+            {/* Available Packing / Application */}
+            {product.application && (
+              <div>
+                 <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-3 flex items-center">
+                  <Download className="w-5 h-5 text-green-600 mr-2" />
+                  {product.application.toLowerCase().includes('packing') ? 'Available Packing' : 'Application'}
+                </h3>
+                <div className="text-gray-700 dark:text-gray-300 font-medium">
+                  {product.application.replace('Available Packing: ', '')}
+                </div>
+              </div>
+            )}
 
 
           </motion.div>

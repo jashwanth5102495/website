@@ -16,7 +16,6 @@ const routes = [
   { url: '/products', changefreq: 'weekly', priority: 0.9 },
   { url: '/about', changefreq: 'monthly', priority: 0.8 },
   { url: '/contact', changefreq: 'monthly', priority: 0.8 },
-  { url: '/feedbacks', changefreq: 'weekly', priority: 0.7 },
 ];
 
 // Format date to YYYY-MM-DD

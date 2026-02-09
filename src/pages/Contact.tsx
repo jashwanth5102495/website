@@ -99,9 +99,9 @@ ${formData.message}
                   <div>
                     <h3 className="font-semibold text-gray-900 dark:text-white">Visit Our Office</h3>
                     <p className="text-gray-600 dark:text-gray-300 mt-1">
-                      No. 134, KEB Office Beside<br />
-                      Vijayapura Road, Devanahalli<br />
-                      Bengaluru Rural District - 562110
+                      Site No 25, Survey No. 121, Yelachaguppe Village, Gridpalya,<br />
+                      Gokula Road, Tavarekere Hobli,<br />
+                      Bengaluru Urban - 562130
                     </p>
                   </div>
                 </div>
@@ -111,8 +111,7 @@ ${formData.message}
                   <div>
                     <h3 className="font-semibold text-gray-900 dark:text-white">Call Us</h3>
                     <p className="text-gray-600 dark:text-gray-300 mt-1">
-                      +91 9513487926<br />
-                      +91 8310355433
+                      +91 80887 73868
                     </p>
                   </div>
                 </div>
@@ -122,7 +121,7 @@ ${formData.message}
                   <div>
                     <h3 className="font-semibold text-gray-900 dark:text-white">Email Us</h3>
                     <p className="text-gray-600 dark:text-gray-300 mt-1">
-                      contactus@greenplanttechnologies.in
+                      sakashagrotech@gmail.com
                     </p>
                   </div>
                 </div>

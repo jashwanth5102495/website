@@ -1,468 +1,167 @@
 import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { ArrowRight, Leaf, Droplets, Shield, Sprout, Zap, FlaskConical } from 'lucide-react';
+import { ArrowUpRight, Leaf, Droplets, Shield, Sprout, Zap, FlaskConical, Target, Users, TrendingUp } from 'lucide-react';
 import { ProductShowcase } from '../components/ProductShowcase';
 import { useTheme } from '../contexts/ThemeContext';
-import backgroundImage from '../assets/background.png';
+import { TestimonialsColumn } from '../components/ui/testimonials-columns-1';
 import '../assets/background.css';
 
 export function Homepage() {
   const [showLightLogo, setShowLightLogo] = useState(false);
   const { theme } = useTheme();
 
-  const features = [
-    {
-      icon: Leaf,
-      title: 'Organic Solutions',
-      description: 'Natural fertilizers that enhance soil health and promote sustainable growth'
-    },
-    {
-      icon: Droplets,
-      title: 'Water Efficient',
-      description: 'Advanced formulations that reduce water usage while maximizing nutrient uptake'
-    },
-    {
-      icon: Shield,
-      title: 'Eco-Friendly',
-      description: 'Environmentally safe products that protect ecosystems and biodiversity'
-    },
-    {
-      icon: Sprout,
-      title: 'Natural Biostimulants',
-      description: 'Enhance plant growth and resilience with our natural biostimulant formulations'
-    },
-    {
-      icon: Zap,
-      title: 'Non Ionic Spray Adjuvants',
-      description: 'Improve spray coverage and effectiveness with our specialized adjuvant solutions'
-    },
+  const offerings = [
     {
       icon: FlaskConical,
-      title: 'Micronutrient Mixture Fertilizers',
-      description: 'Complete micronutrient packages to address specific crop deficiencies and boost yields'
+      title: 'INNOVATION AT THE CORE',
+      description: 'Innovation is the heartbeat of SAKASH AGRO TECH PVT. LTD. Our team of agronomists, chemists, and experts collaborate tirelessly to craft state-of-the-art crop nutrition solutions. Through cutting-edge research and technology, we formulate products that amplify plant health, elevate yields, and promote sustainable farming practices.'
+    },
+    {
+      icon: Target,
+      title: 'PRECISION AND PERFORMANCE',
+      description: 'Our commitment to precision extends to every aspect of our offerings. We understand that each plant\'s needs are unique, and that\'s why our solutions are meticulously tailored to optimize growth at every stage. Whether it\'s enhancing nutrient uptake or unlocking the potential of plant through unique foliar solutions, our products deliver remarkable results.'
+    },
+    {
+      icon: Leaf,
+      title: 'CULTIVATING SUSTAINABILITY',
+      description: 'SAKASH AGRO TECH PVT. LTD. is more than a manufacturer; we are stewards of the environment. Our focus on sustainability guides our every decision. By developing biostimulants, organic fertilizers, and micronutrients that nourish plants while minimizing ecological impact, we contribute to a healthier planet and a more resilient ecosystem.'
+    },
+    {
+      icon: Users,
+      title: 'EMPOWERING GROWERS',
+      description: 'We believe that knowledge is the key to progress. Our team is dedicated to empowering farmers with the information they need to make informed choices. Through personalized guidance and expert support, we ensure that every grower reaps the maximum benefits from our solutions.'
+    },
+    {
+      icon: TrendingUp,
+      title: 'CULTIVATING EXCELLENCE, GROWING FUTURE',
+      description: 'SAKASH AGRO TECH PVT. LTD. is a symbol of dedication, innovation, and progress. As we continue to push the boundaries of agricultural science, we envision a future where sustainable farming practices yield bountiful harvests, thriving ecosystems, and prosperous communities.'
     }
   ];
+
+  // Split offerings into columns for the testimonials layout
+  const firstColumn = offerings.slice(0, 2).map(o => ({
+    text: o.description,
+    name: o.title,
+    icon: o.icon
+  }));
+  
+  const secondColumn = offerings.slice(2, 4).map(o => ({
+    text: o.description,
+    name: o.title,
+    icon: o.icon
+  }));
+  
+  const thirdColumn = offerings.slice(4, 5).map(o => ({
+    text: o.description,
+    name: o.title,
+    icon: o.icon
+  }));
+
+  // Duplicate the last item to balance the third column if needed, or just leave it
+  if (thirdColumn.length > 0) {
+     thirdColumn.push(firstColumn[0]); // Add one more to make it scroll nicely
+  }
 
 
 
   return (
     <div className="min-h-screen dark:bg-black transition-colors duration-300">
-      {/* Hero Section with Glassmorphism */}
-      <section className="relative min-h-screen overflow-hidden">
-        {/* Background Image - Static for Better Performance */}
+      {/* Hero Section */}
+      <section className="relative h-screen overflow-hidden flex items-end pb-24 px-6 md:px-12">
+        {/* Background Image */}
         <div 
-          className="absolute inset-0 bg-cover bg-center bg-no-repeat bg-fixed"
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
           style={{
-            backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.4)), url(${backgroundImage})`
+            backgroundImage: `url('/uploads/background.png')`
           }}
-        />
+        >
+            {/* Black Shade Overlay */}
+            <div className="absolute inset-0 bg-black/50" />
+            {/* Gradient Overlay for text readability */}
+            <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-black/30" />
+        </div>
         
-        {/* Glassmorphism Container */}
-        <div className="relative z-10 min-h-screen backdrop-blur-sm bg-white/10 border border-white/20 rounded-3xl m-4">
+        {/* Content Container */}
+        <div className="relative z-10 w-full max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-end">
           
-          {/* Centered Logo with Alternating Flip Effect and Company Name - Hidden on Mobile */}
-          <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-20 hidden lg:block">
-            <div className="flex flex-col items-center justify-center text-center">
-              {/* Logo Container - Simplified Animation */}
-              <motion.div
-                className="relative w-40 h-40 md:w-48 md:h-48 lg:w-56 lg:h-56 mb-8"
-                animate={{ rotateY: [0, 360] }}
-                transition={{
-                  duration: 3,
-                  repeat: Infinity,
-                  ease: "linear"
-                }}
-                onAnimationComplete={() => {
-                  setShowLightLogo(prev => !prev);
-                }}
-              >
-                <img
-                  src={showLightLogo ? '/uploads/light logo.png' : '/uploads/dark logo.png'}
-                  alt="Green Plant Technologies"
-                  className="w-full h-full object-contain drop-shadow-2xl"
-                />
-              </motion.div>
-              
-              {/* Company Name - Simplified Animation */}
-              <motion.h1
-                className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-white tracking-wide leading-tight"
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ duration: 1, delay: 0.3 }}
-                style={{
-                  fontFamily: "'Inter', 'Segoe UI', 'Roboto', sans-serif",
-                  textShadow: '0 4px 12px rgba(0, 0, 0, 0.5)',
-                  letterSpacing: '0.05em'
-                }}
-              >
-                Green Plant Technologies
-              </motion.h1>
-              
-              {/* Tagline - Simplified Animation */}
-              <motion.p
-                className="text-white/90 text-base md:text-lg lg:text-xl mt-4 font-medium max-w-md"
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ duration: 1, delay: 0.6 }}
-                style={{
-                  fontFamily: "'Inter', 'Segoe UI', 'Roboto', sans-serif",
-                  textShadow: '0 2px 8px rgba(0, 0, 0, 0.4)'
-                }}
-              >
-                Advanced Agricultural Solutions
-              </motion.p>
-            </div>
+          {/* Left Side: Headline */}
+          <div className="flex flex-col items-start">
+            <div className="mb-8">
+            <motion.img 
+              src="/uploads/white.png" 
+              alt="Nutrizenix Logo" 
+              className="w-64 h-auto object-contain"
+              animate={{ rotateY: 360 }}
+              transition={{ 
+                repeat: Infinity, 
+                duration: 4, 
+                ease: "easeInOut",
+                repeatDelay: 1 
+              }}
+            />
+          </div>
+            <motion.h1 
+              initial={{ opacity: 0, y: 50 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              className="text-5xl md:text-7xl font-semibold text-white leading-[1.1] tracking-tight"
+            >
+              Smart Solutions<br />
+              for a Stronger<br />
+              Agriculture
+            </motion.h1>
           </div>
 
-          {/* Main Content */}
-          <div className="flex flex-col lg:flex-row items-start justify-between px-6 md:px-8 pt-24 lg:pt-32">
+          {/* Right Side: Description & Button */}
+          <motion.div 
+            initial={{ opacity: 0, y: 50 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+            className="flex flex-col items-start lg:max-w-xl lg:ml-auto"
+          >
+            <p className="text-lg md:text-xl text-white/90 mb-8 leading-relaxed">
+              Discover how cutting-edge technology, real-time insights, and precision tools are transforming traditional farming into a more productive, sustainable, and resilient industry.
+            </p>
             
-            {/* Left Side - Hero Text First (Mobile) / Hero Text (Desktop) */}
-            <div className="flex-1 max-w-2xl">
-              {/* Mobile: Hero Text First */}
-              <div className="lg:hidden">
-                <motion.h1 
-                  className="text-4xl font-light text-white leading-tight mb-6"
-                  initial={{ opacity: 0 }}
-                  animate={{ opacity: 1 }}
-                  transition={{ duration: 1 }}
-                >
-                  <span className="block">Sustainable</span>
-                  <span className="block text-white/80">Growth</span>
-                  <span className="block">Solutions</span>
-                </motion.h1>
-              </div>
+            <Link
+              to="/products"
+              className="flex items-center space-x-2 bg-orange-300 text-black px-8 py-4 rounded-full font-semibold text-lg hover:bg-orange-400 transition-colors"
+            >
+              <span>Get Started</span>
+              <ArrowUpRight className="w-5 h-5" />
+            </Link>
+          </motion.div>
 
-              {/* Mobile: Logo and Company Name - In the middle */}
-              <motion.div 
-                className="lg:hidden flex flex-col items-center justify-center text-center mb-8"
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ delay: 0.5, duration: 1 }}
-              >
-                {/* Logo Container - Mobile */}
-                <motion.div
-                  className="relative w-32 h-32 mb-6"
-                  animate={{ rotateY: [0, 360] }}
-                  transition={{
-                    duration: 3,
-                    repeat: Infinity,
-                    ease: "linear"
-                  }}
-                  onAnimationComplete={() => {
-                    setShowLightLogo(prev => !prev);
-                  }}
-                >
-                  <img
-                    src={showLightLogo ? '/uploads/light logo.png' : '/uploads/dark logo.png'}
-                    alt="Green Plant Technologies"
-                    className="w-full h-full object-contain drop-shadow-2xl"
-                  />
-                </motion.div>
-                
-                {/* Company Name - Mobile */}
-                <motion.h1
-                  className="text-2xl font-bold text-white tracking-wide leading-tight"
-                  initial={{ opacity: 0 }}
-                  animate={{ opacity: 1 }}
-                  transition={{ duration: 1, delay: 0.3 }}
-                  style={{
-                    fontFamily: "'Inter', 'Segoe UI', 'Roboto', sans-serif",
-                    textShadow: '0 4px 12px rgba(0, 0, 0, 0.5)',
-                    letterSpacing: '0.05em'
-                  }}
-                >
-                  Green Plant Technologies
-                </motion.h1>
-                
-                {/* Tagline - Mobile */}
-                <motion.p
-                  className="text-white/90 text-sm mt-2 font-medium"
-                  initial={{ opacity: 0 }}
-                  animate={{ opacity: 1 }}
-                  transition={{ duration: 1, delay: 0.6 }}
-                  style={{
-                    fontFamily: "'Inter', 'Segoe UI', 'Roboto', sans-serif",
-                    textShadow: '0 2px 8px rgba(0, 0, 0, 0.4)'
-                  }}
-                >
-                  Advanced Agricultural Solutions
-                </motion.p>
-              </motion.div>
-
-              {/* Mobile: Description and Rating - Last */}
-              <div className="lg:hidden">
-                <motion.p 
-                  className="text-white/80 text-base mb-6 leading-relaxed"
-                  initial={{ opacity: 0 }}
-                  animate={{ opacity: 1 }}
-                  transition={{ delay: 0.3, duration: 0.8 }}
-                >
-                  Discover premium organic fertilizers and eco-friendly solutions. 
-                  Transform your agriculture with innovative, sustainable products.
-                </motion.p>
-                
-                {/* Rating - Simplified */}
-                <motion.div 
-                  className="flex items-center space-x-2 mb-8"
-                  initial={{ opacity: 0 }}
-                  animate={{ opacity: 1 }}
-                  transition={{ delay: 0.6, duration: 0.8 }}
-                >
-                  <div className="flex items-center space-x-1">
-                    <Leaf className="w-5 h-5 text-green-400" />
-                    <span className="text-white font-semibold text-lg">4.8</span>
-                  </div>
-                  <span className="text-white/60">from 2,500+ farmers</span>
-                </motion.div>
-              </div>
-
-              {/* Desktop: Hero Text - Simplified Animations */}
-              <div className="hidden lg:block">
-                <motion.h1 
-                  className="text-5xl md:text-7xl font-light text-white leading-tight mb-8"
-                  initial={{ opacity: 0 }}
-                  animate={{ opacity: 1 }}
-                  transition={{ duration: 1 }}
-                >
-                  <span className="block">Sustainable</span>
-                  <span className="block text-white/80">Growth</span>
-                  <span className="block">Solutions</span>
-                </motion.h1>
-                
-                <motion.p 
-                  className="text-white/80 text-lg mb-8 max-w-md leading-relaxed"
-                  initial={{ opacity: 0 }}
-                  animate={{ opacity: 1 }}
-                  transition={{ delay: 0.3, duration: 0.8 }}
-                >
-                  Discover premium organic fertilizers and eco-friendly solutions. 
-                  Transform your agriculture with innovative, sustainable products.
-                </motion.p>
-                
-                {/* Rating - Simplified */}
-                <motion.div 
-                  className="flex items-center space-x-2 mb-8"
-                  initial={{ opacity: 0 }}
-                  animate={{ opacity: 1 }}
-                  transition={{ delay: 0.6, duration: 0.8 }}
-                >
-                  <div className="flex items-center space-x-1">
-                    <Leaf className="w-5 h-5 text-green-400" />
-                    <span className="text-white font-semibold text-lg">4.8</span>
-                  </div>
-                  <span className="text-white/60">from 2,500+ farmers</span>
-                </motion.div>
-              </div>
-            </div>
-
-            {/* Right Side - Product Card (Desktop) */}
-            <div className="w-full lg:w-96">
-
-              {/* Desktop: Product Card */}
-              <motion.div 
-                className="hidden lg:block bg-black/40 backdrop-blur-md rounded-2xl p-6 border border-white/10"
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ delay: 0.5, duration: 1 }}
-              >
-                <h3 className="text-white text-xl font-semibold mb-4">
-                  Featured Product<br />GREENGRO
-                </h3>
-                
-                {/* Product Details */}
-                <div className="grid grid-cols-2 gap-4 mb-4">
-                  <div className="bg-white/10 rounded-lg p-3 border border-white/20">
-                    <div className="flex items-center space-x-2 text-white/60 text-sm mb-1">
-                      <Leaf className="w-4 h-4" />
-                      <span>Category</span>
-                    </div>
-                    <div className="text-white font-medium">Organic</div>
-                  </div>
-                  
-                  <div className="bg-white/10 rounded-lg p-3 border border-white/20">
-                    <div className="flex items-center space-x-2 text-white/60 text-sm mb-1">
-                      <Shield className="w-4 h-4" />
-                      <span>Application</span>
-                    </div>
-                    <div className="text-white font-medium">All Crops</div>
-                  </div>
-                </div>
-                
-                {/* Usage Details */}
-                <div className="grid grid-cols-2 gap-4 mb-6">
-                  <div className="bg-white/10 rounded-lg p-3 border border-white/20">
-                    <div className="flex items-center space-x-2 text-white/60 text-sm mb-1">
-                      <Droplets className="w-4 h-4" />
-                      <span>Foliar Spray</span>
-                    </div>
-                    <div className="text-white font-medium">2-4 ml/litre</div>
-                  </div>
-                  
-                  <div className="bg-white/10 rounded-lg p-3 border border-white/20">
-                    <div className="flex items-center space-x-2 text-white/60 text-sm mb-1">
-                      <Droplets className="w-4 h-4" />
-                      <span>Drip Irrigation</span>
-                    </div>
-                    <div className="text-white font-medium">500ml/acre</div>
-                  </div>
-                </div>
-                
-                {/* Stock Status */}
-                <div className="flex items-center justify-center mb-6">
-                  <div className="flex items-center space-x-2 text-green-400">
-                    <div className="w-2 h-2 bg-green-400 rounded-full"></div>
-                    <span>In Stock</span>
-                  </div>
-                </div>
-                
-                {/* Action Buttons */}
-                <div className="space-y-3">
-                  <Link
-                    to="/products/greengro"
-                    className="w-full bg-white text-gray-900 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors block text-center"
-                  >
-                    View Details
-                  </Link>
-                  <Link
-                    to="/products"
-                    className="w-full bg-green-600 text-white py-3 rounded-lg font-semibold hover:bg-green-700 transition-colors flex items-center justify-center"
-                  >
-                    Explore Products
-                    <ArrowRight className="ml-2 w-4 h-4" />
-                  </Link>
-                </div>
-              </motion.div>
-            </div>
-          </div>
-
-
-
-          {/* Minimal floating elements for better performance */}
-          <div className="absolute inset-0 pointer-events-none">
-            {[...Array(3)].map((_, i) => (
-              <motion.div
-                key={i}
-                className="absolute"
-                style={{
-                  left: `${30 + i * 20}%`,
-                  top: `${30 + i * 15}%`,
-                }}
-                animate={{
-                  y: [0, -10, 0],
-                  opacity: [0.4, 0.8, 0.4]
-                }}
-                transition={{
-                  duration: 3,
-                  repeat: Infinity,
-                  delay: i * 1,
-                  ease: "easeInOut"
-                }}
-              >
-                <Leaf className="w-6 h-6 text-green-400/50" />
-              </motion.div>
-            ))}
-          </div>
         </div>
       </section>
 
-      {/* Features Section */}
-      <section className="py-24 bg-white dark:bg-black transition-colors duration-300">
-        <div className="max-w-7xl mx-auto px-4">
+      {/* What Do We Offer? Section */}
+      <section className="bg-background my-20 relative">
+        <div className="w-full z-10 mx-auto px-4 md:px-8">
           <motion.div 
-            className="text-center mb-20"
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-          >
-            <h2 className="text-5xl md:text-6xl font-bold text-gray-900 dark:text-white mb-6">
-              Why Choose Our{' '}
-              <span className="bg-gradient-to-r from-green-600 to-emerald-600 bg-clip-text text-transparent">
-                Solutions?
-              </span>
-            </h2>
-            <p className="text-xl md:text-2xl text-gray-600 dark:text-gray-300 max-w-4xl mx-auto leading-relaxed">
-              We provide cutting-edge agricultural solutions that help farmers achieve better yields 
-              while maintaining environmental sustainability.
-            </p>
-          </motion.div>
+            initial={{ opacity: 0, y: 20 }} 
+            whileInView={{ opacity: 1, y: 0 }} 
+            transition={{ duration: 0.8, delay: 0.1, ease: [0.16, 1, 0.3, 1] }} 
+            viewport={{ once: true }} 
+            className="flex flex-col items-center justify-center max-w-[540px] mx-auto mb-10" 
+          > 
+            <div className="flex justify-center"> 
+              <div className="border border-green-200 dark:border-green-800 py-1 px-4 rounded-full bg-green-50 dark:bg-green-900/20 text-green-600 dark:text-green-400 text-sm font-medium">Our Values</div> 
+            </div> 
+  
+            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold tracking-tighter mt-5 text-center text-gray-900 dark:text-white"> 
+              What Do We Offer?
+            </h2> 
+            <p className="text-center mt-5 opacity-75 text-lg text-gray-600 dark:text-gray-300"> 
+              Discover how our innovative solutions are transforming agriculture through precision, sustainability, and empowerment.
+            </p> 
+          </motion.div> 
 
-          {/* First Row - Now showing Natural Biostimulants, Non Ionic Spray Adjuvants, Micronutrient Mixture Fertilizers */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
-            {features.slice(3, 6).map((feature, index) => {
-              const Icon = feature.icon;
-              // Map feature titles to filter parameters
-              const getFilterParam = (title: string) => {
-                switch (title) {
-                  case 'Natural Biostimulants':
-                    return 'biostimulants';
-                  case 'Non Ionic Spray Adjuvants':
-                    return 'adjuvants';
-                  case 'Micronutrient Mixture Fertilizers':
-                    return 'micronutrients';
-                  default:
-                    return '';
-                }
-              };
-              
-              return (
-                <Link
-                  key={index + 3}
-                  to={`/products?filter=${getFilterParam(feature.title)}`}
-                  className="block"
-                >
-                  <motion.div
-                    initial={{ opacity: 0 }}
-                    whileInView={{ opacity: 1 }}
-                    transition={{ duration: 0.6, delay: index * 0.2 }}
-                    viewport={{ once: true }}
-                    className="relative text-center p-10 rounded-3xl bg-gradient-to-br from-green-50 to-emerald-50 dark:from-black dark:to-gray-900 hover:from-green-100 hover:to-emerald-100 dark:hover:from-gray-900 dark:hover:to-black transition-all duration-300 group shadow-xl hover:shadow-2xl border border-green-100 dark:border-gray-800 hover:-translate-y-2 cursor-pointer"
-                  >
-                    <div 
-                      className="relative w-20 h-20 bg-gradient-to-r from-green-600 to-emerald-600 rounded-2xl flex items-center justify-center mx-auto mb-6 shadow-lg"
-                    >
-                      <Icon className="w-10 h-10 text-white" />
-                    </div>
-                    
-                    <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">{feature.title}</h3>
-                    <p className="text-gray-600 dark:text-gray-300 text-lg leading-relaxed">{feature.description}</p>
-                  </motion.div>
-                </Link>
-              );
-            })}
-          </div>
-
-          {/* Second Row - Now showing Organic Solutions, Water Efficient, Eco-Friendly */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
-            {features.slice(0, 3).map((feature, index) => {
-              const Icon = feature.icon;
-              return (
-                <Link
-                  key={index}
-                  to="/products"
-                  className="block"
-                >
-                  <motion.div
-                    initial={{ opacity: 0 }}
-                    whileInView={{ opacity: 1 }}
-                    transition={{ duration: 0.6, delay: index * 0.2 }}
-                    viewport={{ once: true }}
-                    className="relative text-center p-10 rounded-3xl bg-gradient-to-br from-green-50 to-emerald-50 dark:from-black dark:to-gray-900 hover:from-green-100 hover:to-emerald-100 dark:hover:from-gray-900 dark:hover:to-black transition-all duration-300 group shadow-xl hover:shadow-2xl border border-green-100 dark:border-gray-800 hover:-translate-y-2 cursor-pointer"
-                  >
-                    <div 
-                      className="relative w-20 h-20 bg-gradient-to-r from-green-600 to-emerald-600 rounded-2xl flex items-center justify-center mx-auto mb-6 shadow-lg"
-                    >
-                      <Icon className="w-10 h-10 text-white" />
-                    </div>
-                    
-                    <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">{feature.title}</h3>
-                    <p className="text-gray-600 dark:text-gray-300 text-lg leading-relaxed">{feature.description}</p>
-                  </motion.div>
-                </Link>
-              );
-            })}
+          <div className="flex justify-center gap-6 mt-10 [mask-image:linear-gradient(to_bottom,transparent,black_25%,black_75%,transparent)] max-h-[740px] overflow-hidden"> 
+            <TestimonialsColumn testimonials={firstColumn} className="flex-1" duration={15} /> 
+            <TestimonialsColumn testimonials={secondColumn} className="hidden md:block flex-1" duration={19} /> 
+            <TestimonialsColumn testimonials={thirdColumn} className="hidden lg:block flex-1" duration={17} /> 
           </div>
         </div>
       </section>

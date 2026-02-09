@@ -143,7 +143,7 @@ export function Products() {
               {/* Product Image Container */}
               <div className="relative w-96 h-96 flex items-center justify-center">
                 {/* Glow Effect */}
-                <div className="absolute inset-0 bg-gradient-to-b from-green-300/30 to-black/30 rounded-full blur-3xl"></div>
+                <div className="absolute inset-0 bg-gradient-to-b from-orange-300/30 to-black/30 rounded-full blur-3xl"></div>
                 
                 {/* Product Image */}
                 <img
@@ -300,7 +300,7 @@ export function Products() {
 
                   <Link
                     to={`/products/${product.id}`}
-                    className="w-full bg-gradient-to-r from-green-600 to-emerald-600 text-white text-center py-2 px-4 rounded-lg hover:from-green-700 hover:to-emerald-700 transition-all duration-300 font-medium text-sm block shadow-md hover:shadow-lg"
+                    className="w-full bg-orange-300 text-black text-center py-2 px-4 rounded-lg hover:bg-orange-400 transition-all duration-300 font-medium text-sm block shadow-md hover:shadow-lg"
                   >
                     View Details
                   </Link>

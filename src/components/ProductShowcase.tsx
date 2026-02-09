@@ -2,36 +2,7 @@ import { useState, useEffect, useRef, useCallback } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
-
-interface Product {
-  id: number;
-  name: string;
-  image: string;
-}
-
-const products: Product[] = [
-  { id: 1, name: 'Combi Pro', image: '/uploads/combi pro.png' },
-  { id: 2, name: 'G-BOR', image: '/uploads/G-BOR.png' },
-  { id: 3, name: 'Green Care', image: '/uploads/green care.png' },
-  { id: 4, name: 'Green Pro', image: '/uploads/green pro.png' },
-  { id: 5, name: 'Green Gro', image: '/uploads/GREENGRO.png' },
-  { id: 6, name: 'Jeevan Plus', image: '/uploads/JEEVAN PLUS.png' },
-  { id: 7, name: 'Lasya', image: '/uploads/lasya.png' },
-  { id: 8, name: 'Mango King', image: '/uploads/mango king.png' },
-  { id: 9, name: 'Melon Plus', image: '/uploads/melon plus.png' },
-  { id: 10, name: 'Melon Soil', image: '/uploads/melon soil.png' },
-  { id: 11, name: 'Micro', image: '/uploads/micro.png' },
-  { id: 12, name: 'Rich Roots', image: '/uploads/rich roots.png' },
-  { id: 13, name: 'Root Booster', image: '/uploads/Root Booster.png' },
-  { id: 14, name: 'Shine Citrus', image: '/uploads/shine citrus.png' },
-  { id: 15, name: 'Silicron', image: '/uploads/silicron.png' },
-  { id: 16, name: 'Sparsha', image: '/uploads/sparsha.png' },
-  { id: 17, name: 'Sun Shine', image: '/uploads/sun sgine.png' },
-  { id: 18, name: 'Swarna', image: '/uploads/swarna.png' },
-  { id: 19, name: 'Wake Up', image: '/uploads/wake up.png' },
-  { id: 20, name: 'X-SPA80', image: '/uploads/X-SPA80.png' },
-  { id: 21, name: 'Super Grow', image: '/uploads/super grow.png' },
-];
+import { products } from '../data/products';
 
 export function ProductShowcase() {
   const [translateX, setTranslateX] = useState(0);
@@ -39,19 +10,6 @@ export function ProductShowcase() {
   const [isDragging, setIsDragging] = useState(false);
   const intervalRef = useRef<NodeJS.Timeout | null>(null);
   const cardWidth = 300; // Width of each card including margin
-
-  // Create URL-friendly slug from product name
-  const createSlug = (name: string) => {
-    return name
-      .toLowerCase()
-      .replace(/\s+/g, '-')        // Replace spaces with hyphens
-      .replace(/[^\w\-]+/g, '')    // Remove all non-word chars except hyphens
-      .replace(/\-\-+/g, '-')      // Replace multiple hyphens with single hyphen
-      .replace(/^-+/, '')          // Trim hyphens from start
-      .replace(/-+$/, '');         // Trim hyphens from end
-  };
-
-
 
   // Manual scroll functions
   const scrollLeft = () => {
@@ -197,7 +155,7 @@ export function ProductShowcase() {
                     transition={{ duration: 0.3 }}
                   >
                     <Link 
-                      to={`/products/${createSlug(product.name)}`}
+                      to={`/products/${product.id}`}
                       className={`
                         block relative w-72 h-80 rounded-2xl overflow-hidden shadow-2xl mx-auto group cursor-pointer
                         ${isCenter ? 'ring-4 ring-green-500/50 dark:ring-green-400/50' : ''}
