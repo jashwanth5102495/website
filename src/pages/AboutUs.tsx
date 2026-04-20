@@ -79,10 +79,13 @@ export function AboutUs() {
              transition={{ duration: 0.8 }}
              className="relative h-full min-h-[300px] rounded-2xl overflow-hidden shadow-2xl"
           >
-            <img 
-              src="https://images.unsplash.com/photo-1592982537447-6f2a6a0c7c18?q=80&w=2070&auto=format&fit=crop" 
-              alt="Agricultural Innovation" 
+            <video 
+              src="/uploads/n.mp4" 
               className="absolute inset-0 w-full h-full object-cover"
+              autoPlay
+              loop
+              muted
+              playsInline
             />
           </motion.div>
         </div>

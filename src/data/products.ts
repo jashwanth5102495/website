@@ -19,7 +19,7 @@ export const products: Product[] = [
     id: 'aamplus',
     name: 'AAM+',
     category: 'specialty',
-    image: '/uploads/AAM%2B.png',
+    image: '/uploads/AAM-plus.png',
     shortDescription: '(Micronutrient Fertilizer Mixture for Mango) FOR FOLIAR SPRAY',
     fullDescription: 'Aam+ is an Essential Micronutrient mixture product for spray application. Aam+ is 100% Watersoluble fertilizer to facilitate efficient absorption of nutrients by the leaves. It helps better utilisation of major nutrients, increases immunity power of plants against adverse conditions, takes part in enzymatic functions acting as a catalytic agent to produce vigorous growth, and helps to increase yield and quality of the farm produce.',
     features: [
@@ -42,7 +42,7 @@ export const products: Product[] = [
     id: 'amigrowplus',
     name: 'AMIGROW+',
     category: 'specialty',
-    image: '/uploads/AMIGROW%2B.png',
+    image: '/uploads/AMIGROW-plus.png',
     shortDescription: 'Protein hydrolysate 18% (Animal source) (Liquid) Mixture of Amino Acid Bio Stimulant Product',
     fullDescription: 'AMIGROW+ is a highly effective, natural agent which promotes photosynthesis in turn leading to promotion of carbohydrates, protein, oils and fats. It offers an instant, energy-efficient plant nitrogen supply, increases resistance against diseases like chlorosis and ability to withstand stresses such as drought. Several of the amino acids in AMIGROW+ are recognized plant growth promotants. It also promotes the ripening and colouring process in fruit.',
     features: [
@@ -68,7 +68,7 @@ export const products: Product[] = [
     id: 'bananaplus',
     name: 'BANANA+',
     category: 'specialty',
-    image: '/uploads/BANANA%2B.png',
+    image: '/uploads/BANANA-plus.png',
     shortDescription: '(Micronutrient Fertilizer Mixture) FOR FOLIAR SPRAY',
     fullDescription: 'Banana+ is an Essential Micronutrient mixture product for Spray Application. Banana+ is 100% Watersoluble Fertilizer to facilitate efficient absorption of nutrients by the leaves. It helps better utilisation of major nutrients, increases the immunity power of plants against adverse conditions, takes part in enzymatic functions acting as a catalytic agent to produce vigorous growth, and helps to increase yield and quality of the farm produce.',
     features: [
@@ -91,7 +91,7 @@ export const products: Product[] = [
     id: 'nutri-bhushakti',
     name: 'NUTRI BHUSHAKTI',
     category: 'specialty',
-    image: '/uploads/NUTRI%20BHUSHAKTI.png',
+    image: '/uploads/NUTRI-BHUSHAKTI.png',
     shortDescription: 'Micronutrient Fertilizer Mixture For Soil Application',
     fullDescription: 'NUTRI BHUSHAKTI is a different product which is having essential micronutrients and traces of macro nutrients which helps the crop in all stages of plant growth and development and finally this product will help to get better yield in terms of qualitatively and quantitatively.',
     features: [
@@ -114,7 +114,7 @@ export const products: Product[] = [
     id: 'boron_plus',
     name: 'BORON+',
     category: 'specialty',
-    image: '/uploads/BORON%2B.png',
+    image: '/uploads/BORON-plus.png',
     shortDescription: 'BORAX (SODIUM TETRA BORATE) (B - 10.5%) MICRONUTRIENT FERTILIZER SOIL APPLICATION',
     fullDescription: 'BORON+ is a micronutrient fertilizer for soil application containing Borax (Sodium Tetra Borate) with 10.5% Boron. It plays a vital role in the proper development of roots and shoots, improves germination and metabolic processes, and enhances flowering, tillering, and fruit formation.',
     features: [
@@ -215,7 +215,7 @@ export const products: Product[] = [
     id: 'citronplus',
     name: 'CITRON+',
     category: 'specialty',
-    image: '/uploads/CITRON%2B.png',
+    image: '/uploads/CITRON-plus.png',
     shortDescription: '(Micronutrient Fertilizer Mixture) FOR FOLIAR SPRAY',
     fullDescription: 'CITRON + is an Essential Micronutrient mixture product for Spray Application. CITRON + is 100% Watersoluble Fertilizer to facilitate efficient absorption of nutrients by the leaves. It helps better utilisation of major nutrients, increases the immunity power of plants against adverse conditions, takes part in enzymatic functions acting as a catalytic agent to produce vigorous growth, and helps to increase yield and quality of the farm produce.',
     features: [
@@ -239,7 +239,7 @@ export const products: Product[] = [
     id: 'dymond-plus-33',
     name: 'DYMOND + 33',
     category: 'specialty',
-    image: '/uploads/DYMOND%20%2B%2033.png',
+    image: '/uploads/DYMOND--plus-33.png',
     shortDescription: 'Zinc Monohydrate-33% Foliar Application',
     fullDescription: 'DYMOND + 33 is a premium Zinc Monohydrate-33% fertilizer designed for foliar application. It is a quality assured Zinc product with 100% purity that effectively controls Zinc deficiency and boosts crop yield and quality. It is particularly effective against yellowing (Khaira) disease in paddy.',
     features: [
@@ -263,7 +263,7 @@ export const products: Product[] = [
     id: 'dymond---12',
     name: 'DYMOND - 12',
     category: 'specialty',
-    image: '/uploads/DYMOND%20-%2012.png',
+    image: '/uploads/DYMOND---12.png',
     shortDescription: 'Chelated Zinc as Zn-EDTA - 12% Zn Straight Micronutrient fertilizer (Foliar Application)',
     fullDescription: 'As per the research in crops required not only micronutrients are most agriculture the high yielding major nutrients but also essential Off micronutrients Zinc element plays an important role in crop production. Because of the Zinc deficiency in the soil now a days crop yield decreasing gradually. To improve the yield and quality of crops SAKASH AGRO TECH PVT. LTD. has introduced ultimate quality Zinc product like Zinc -12% which contains chelated Zinc 12%.',
     features: [
@@ -310,7 +310,7 @@ export const products: Product[] = [
     id: 'green-plus',
     name: 'GREEN PLUS',
     category: 'specialty',
-    image: '/uploads/GREEN%20PLUS.png',
+    image: '/uploads/GREEN-PLUS.png',
     shortDescription: '(Micronutrient Fertilizer Mixture) FOR FOLIAR SPRAY',
     fullDescription: 'Green Plus is an Essential Micronutrient mixture product for spray application. Green Plus is 100% Watersoluble fertilizer to facilitate efficient absorption of nutrients by the leaves. It helps better utilisation of major nutrients, increases immunity power of plants against adverse conditions, takes part in enzymatic functions acting as a catalytic agent to produce vigorous growth, and helps to increase yield and quality of the farm produce.',
     features: [
@@ -363,7 +363,7 @@ export const products: Product[] = [
     id: 'high-zing',
     name: 'NUTRI HIGH ZINC',
     category: 'specialty',
-    image: '/uploads/NUTRI%20HIGH%20ZINC.png',
+    image: '/uploads/NUTRI-HIGH-ZINC.png',
     shortDescription: 'Micronutrient Fertilizer Mixture For Soil Application',
     fullDescription: 'NUTRI HIGH ZINC is a different product which is having essential micronutrients and traces of macro nutrients which helps the crop in all stages of plant growth and development and finally this product will help to get better yield in terms of qualitatively and quantitatively.',
     features: [
@@ -386,7 +386,7 @@ export const products: Product[] = [
     id: 'humigrowplus',
     name: 'HUMIGROW+',
     category: 'specialty',
-    image: '/uploads/HUMIGROW%2B.png',
+    image: '/uploads/HUMIGROW-plus.png',
     shortDescription: 'Humic acid and Fulvic acid 19.5 % (Liquid) Bio Stimulant Product',
     fullDescription: 'HUMIGROW+ contains organic constituents like humic, humates & Fulvic acids supported by naturally containing essential trace elements. Humic acids are reported to increase permeability of plant membranes, resulting in higher metabolic activity due to increased nutrient\'s availability & enzyme activity. Humic acids build up organic matter which is required for microbial growth. It stimulates the respiration rates of seeding which leads to quicker germination. It also protects plants from chlorosis, enhance photosynthesis, increases vegetative growth which results in higher yields & healthier crops.',
     features: [
@@ -438,7 +438,7 @@ export const products: Product[] = [
     id: 'nutri-gold',
     name: 'NUTRI GOLD',
     category: 'specialty',
-    image: '/uploads/NUTRI%20GOLD.png',
+    image: '/uploads/NUTRI-GOLD.png',
     shortDescription: 'Mixture of Seaweed extract and Humic acid (Granule) Biostimulant product SOIL APPLICATION',
     fullDescription: 'NUTRI GOLD Bio stimulant product can be used in agriculture to Improve soil quality. It can improve the chemical, physical, and biological properties of soil. They can also help maintain the soil\'s C:N ratio and increase its water-holding capacity.',
     features: [
@@ -462,7 +462,7 @@ export const products: Product[] = [
     id: 'nutri-grow',
     name: 'NUTRI GROW',
     category: 'specialty',
-    image: '/uploads/NUTRI%20GROW.png',
+    image: '/uploads/NUTRI-GROW.png',
     shortDescription: 'Micronutrient Fertilizer Mixture (Foliar Application)',
     fullDescription: 'NUTRI GROW is a Micronutrient Fertilizer Mixture designed for Foliar Application. It improves photosynthesis, overcomes micronutrient deficiency, increases nutrient uptake from soil, and improves disease resistance in all crops. Required in small quantity but increases yield both qualitative and quantitatively.',
     features: [
@@ -486,7 +486,7 @@ export const products: Product[] = [
     id: 'nutri-ferti-12',
     name: 'NUTRI-FERTI 12:61:0',
     category: 'specialty',
-    image: '/uploads/NUTRI-FERTI%2012-61-0.png',
+    image: '/uploads/NUTRI-FERTI-12-61-0.png',
     shortDescription: '100% Water Soluble Complex Fertilizer N:P:K 12:61:00 Mono Ammonium Phosphate (MAP)',
     fullDescription: 'NUTRI-FERTI (12:61:00) Mono Ammonium Phosphate (MAP) contains Nitrogen and Phosphorus in easily soluble and available form. It improves root, shoot growth along with health of the plants. Reduces flower drop and increases fruit setting. Improves the yield both by quality and quantity. Note: NUTRI-FERTI should not be mixed with Calcium and Magnesium containing fertilizer.',
     features: [
@@ -510,7 +510,7 @@ export const products: Product[] = [
     id: 'nutri-ferti-13',
     name: 'NUTRI-FERTI 13:40:13',
     category: 'specialty',
-    image: '/uploads/NUTRI-FERTI%2013-40-13.png',
+    image: '/uploads/NUTRI-FERTI-13-40-13.png',
     shortDescription: '100% Water Soluble Complex Fertilizer N:P:K 13:40:13',
     fullDescription: 'NUTRI-FERTI (13:40:13) is a 100% Water Soluble Complex Fertilizer. It helps in better nutrient uptake and thereby increases the yield and quality of the produce.',
     features: [
@@ -533,7 +533,7 @@ export const products: Product[] = [
     id: 'nutri-ferti-n',
     name: 'NUTRI-FERTI 0:52:34',
     category: 'specialty',
-    image: '/uploads/NUTRI-FERTI%200-52-34.png',
+    image: '/uploads/NUTRI-FERTI-0-52-34.png',
     shortDescription: '100% Water Soluble Complex Fertilizer N:P:K 00:52:34 Mono Potassium Phosphate (MKP)',
     fullDescription: 'NUTRI-FERTI (0:52:34) is a 100% Water Soluble Complex Fertilizer (Mono Potassium Phosphate - MKP). Application of NUTRI-FERTI fertilizer either through foliar spray or fertigation will help in better nutrient uptake and thereby increases the yield and quality of the produce. Plants become healthy and develop resistance against diseases and pests.',
     features: [
@@ -556,7 +556,7 @@ export const products: Product[] = [
     id: 'nutri-ferti-p',
     name: 'NUTRI-FERTI 0:0:50',
     category: 'specialty',
-    image: '/uploads/NUTRI-FERTI%200-0-50.png',
+    image: '/uploads/NUTRI-FERTI-0-0-50.png',
     shortDescription: '100% Water Soluble Complex Fertilizer N:P:K 00:00:50 Potassium Sulphate (SOP)',
     fullDescription: 'NUTRI-FERTI (0:0:50) Potassium Sulphate (SOP) helps in better absorption of Potassium & Sulphur. It improves fruit development, oil content in seeds, size and color of the fruit. It also helps in plant growth, maturity and enhances yield both by quality and quantity.',
     features: [
@@ -580,7 +580,7 @@ export const products: Product[] = [
     id: 'nutri-ferti-pnk',
     name: 'NUTRI-FERTI 13:0:45',
     category: 'specialty',
-    image: '/uploads/NUTRI-FERTI%2013-0-45.png',
+    image: '/uploads/NUTRI-FERTI-13-0-45.png',
     shortDescription: '100% Water Soluble Complex Fertilizer N:P:K 13:0:45 Potassium Nitrate',
     fullDescription: 'NUTRI-FERTI (13:0:45) Potassium Nitrate helps crops to resist diseases, enhances photosynthesis, provides better resistance to drought and frost, and improves plant health. It also enhances grain weight and thereby increases yield.',
     features: [
@@ -604,7 +604,7 @@ export const products: Product[] = [
     id: 'nutri-ferti',
     name: 'NUTRI-FERTI 19:19:19',
     category: 'specialty',
-    image: '/uploads/NUTRI-FERTI%2019-19-19.png',
+    image: '/uploads/NUTRI-FERTI-19-19-19.png',
     shortDescription: '100% Water Soluble Mixture of Fertilizer (NPK 19:19:19)',
     fullDescription: 'NUTRI-FERTI is a 100% water soluble NPK fertilizer. Hence, it is easily available to the plants. Its foliar spray helps in immediate absorption thereby increasing the yield & quality of produce. It also helps in drought resistance and keep plants healthy and greener.',
     features: [
@@ -832,7 +832,7 @@ export const products: Product[] = [
     id: 'super-plus',
     name: 'SUPER PLUS',
     category: 'specialty',
-    image: '/uploads/SUPER%20PLUS.png',
+    image: '/uploads/SUPER-PLUS.png',
     shortDescription: '(Micronutrient Fertilizer Mixture) FOR FOLIAR SPRAY',
     fullDescription: 'Super Plus is an Essential Micronutrient mixture product for spray application. It is 100% Watersoluble fertilizer to facilitate efficient absorption of nutrients by the leaves. It helps better utilisation of major nutrients, increases immunity power of plants against adverse conditions, takes part in enzymatic functions acting as a catalytic agent to produce vigorous growth, and helps to increase yield and quality of the farm produce.',
     features: [
@@ -902,7 +902,7 @@ export const products: Product[] = [
     id: 'combi-pro',
     name: 'Combi Pro',
     category: 'specialty',
-    image: '/uploads/Combi%20Pro.png',
+    image: '/uploads/Combi-Pro.png',
     shortDescription: 'Advanced agricultural solution for Combi Pro.',
     fullDescription: 'High-quality Combi Pro designed to improve crop yield and soil health. Suitable for various agricultural applications.',
     features: ['High efficiency', 'Quality improvement', 'Sustainable', 'Easy application'],
