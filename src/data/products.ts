@@ -91,7 +91,7 @@ export const products: Product[] = [
     id: 'nutri-bhushakti',
     name: 'NUTRI BHUSHAKTI',
     category: 'specialty',
-    image: '/uploads/BHUSHAKTI.png',
+    image: '/uploads/NUTRI BHUSHAKTI.png',
     shortDescription: 'Micronutrient Fertilizer Mixture For Soil Application',
     fullDescription: 'NUTRI BHUSHAKTI is a different product which is having essential micronutrients and traces of macro nutrients which helps the crop in all stages of plant growth and development and finally this product will help to get better yield in terms of qualitatively and quantitatively.',
     features: [
@@ -363,7 +363,7 @@ export const products: Product[] = [
     id: 'high-zing',
     name: 'NUTRI HIGH ZINC',
     category: 'specialty',
-    image: '/uploads/HIGH ZING.png',
+    image: '/uploads/NUTRI HIGH ZINC.png',
     shortDescription: 'Micronutrient Fertilizer Mixture For Soil Application',
     fullDescription: 'NUTRI HIGH ZINC is a different product which is having essential micronutrients and traces of macro nutrients which helps the crop in all stages of plant growth and development and finally this product will help to get better yield in terms of qualitatively and quantitatively.',
     features: [
@@ -486,7 +486,7 @@ export const products: Product[] = [
     id: 'nutri-ferti-12',
     name: 'NUTRI-FERTI 12:61:0',
     category: 'specialty',
-    image: '/uploads/NUTRI-FERTI 12.png',
+    image: '/uploads/NUTRI-FERTI 12-61-0.png',
     shortDescription: '100% Water Soluble Complex Fertilizer N:P:K 12:61:00 Mono Ammonium Phosphate (MAP)',
     fullDescription: 'NUTRI-FERTI (12:61:00) Mono Ammonium Phosphate (MAP) contains Nitrogen and Phosphorus in easily soluble and available form. It improves root, shoot growth along with health of the plants. Reduces flower drop and increases fruit setting. Improves the yield both by quality and quantity. Note: NUTRI-FERTI should not be mixed with Calcium and Magnesium containing fertilizer.',
     features: [
@@ -510,7 +510,7 @@ export const products: Product[] = [
     id: 'nutri-ferti-13',
     name: 'NUTRI-FERTI 13:40:13',
     category: 'specialty',
-    image: '/uploads/NUTRI-FERTI 13.png',
+    image: '/uploads/NUTRI-FERTI 13-40-13.png',
     shortDescription: '100% Water Soluble Complex Fertilizer N:P:K 13:40:13',
     fullDescription: 'NUTRI-FERTI (13:40:13) is a 100% Water Soluble Complex Fertilizer. It helps in better nutrient uptake and thereby increases the yield and quality of the produce.',
     features: [
@@ -533,7 +533,7 @@ export const products: Product[] = [
     id: 'nutri-ferti-n',
     name: 'NUTRI-FERTI 0:52:34',
     category: 'specialty',
-    image: '/uploads/NUTRI-FERTI N.png',
+    image: '/uploads/NUTRI-FERTI 0-52-34.png',
     shortDescription: '100% Water Soluble Complex Fertilizer N:P:K 00:52:34 Mono Potassium Phosphate (MKP)',
     fullDescription: 'NUTRI-FERTI (0:52:34) is a 100% Water Soluble Complex Fertilizer (Mono Potassium Phosphate - MKP). Application of NUTRI-FERTI fertilizer either through foliar spray or fertigation will help in better nutrient uptake and thereby increases the yield and quality of the produce. Plants become healthy and develop resistance against diseases and pests.',
     features: [
@@ -556,7 +556,7 @@ export const products: Product[] = [
     id: 'nutri-ferti-p',
     name: 'NUTRI-FERTI 0:0:50',
     category: 'specialty',
-    image: '/uploads/NUTRI-FERTI P.png',
+    image: '/uploads/NUTRI-FERTI 0-0-50.png',
     shortDescription: '100% Water Soluble Complex Fertilizer N:P:K 00:00:50 Potassium Sulphate (SOP)',
     fullDescription: 'NUTRI-FERTI (0:0:50) Potassium Sulphate (SOP) helps in better absorption of Potassium & Sulphur. It improves fruit development, oil content in seeds, size and color of the fruit. It also helps in plant growth, maturity and enhances yield both by quality and quantity.',
     features: [
@@ -580,7 +580,7 @@ export const products: Product[] = [
     id: 'nutri-ferti-pnk',
     name: 'NUTRI-FERTI 13:0:45',
     category: 'specialty',
-    image: '/uploads/NUTRI-FERTI PNK.png',
+    image: '/uploads/NUTRI-FERTI 13-0-45.png',
     shortDescription: '100% Water Soluble Complex Fertilizer N:P:K 13:0:45 Potassium Nitrate',
     fullDescription: 'NUTRI-FERTI (13:0:45) Potassium Nitrate helps crops to resist diseases, enhances photosynthesis, provides better resistance to drought and frost, and improves plant health. It also enhances grain weight and thereby increases yield.',
     features: [
@@ -604,7 +604,7 @@ export const products: Product[] = [
     id: 'nutri-ferti',
     name: 'NUTRI-FERTI 19:19:19',
     category: 'specialty',
-    image: '/uploads/NUTRI-FERTI.png',
+    image: '/uploads/NUTRI-FERTI 19-19-19.png',
     shortDescription: '100% Water Soluble Mixture of Fertilizer (NPK 19:19:19)',
     fullDescription: 'NUTRI-FERTI is a 100% water soluble NPK fertilizer. Hence, it is easily available to the plants. Its foliar spray helps in immediate absorption thereby increasing the yield & quality of produce. It also helps in drought resistance and keep plants healthy and greener.',
     features: [
@@ -902,7 +902,7 @@ export const products: Product[] = [
     id: 'combi-pro',
     name: 'Combi Pro',
     category: 'specialty',
-    image: '/uploads/combi pro.png',
+    image: '/uploads/Combi Pro.png',
     shortDescription: 'Advanced agricultural solution for Combi Pro.',
     fullDescription: 'High-quality Combi Pro designed to improve crop yield and soil health. Suitable for various agricultural applications.',
     features: ['High efficiency', 'Quality improvement', 'Sustainable', 'Easy application'],
