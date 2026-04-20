@@ -42,7 +42,7 @@ export function Navigation() {
           <img 
             src="/uploads/c.png" 
             alt="Nutrizenix" 
-            className="w-32 md:w-44 h-auto object-contain drop-shadow-[0_0_15px_rgba(255,255,255,0.8)] relative z-10" 
+            className="w-24 md:w-32 h-auto object-contain drop-shadow-[0_0_15px_rgba(255,255,255,0.8)] relative z-10" 
           />
         </Link>
 
