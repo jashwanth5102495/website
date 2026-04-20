@@ -37,8 +37,13 @@ export function Navigation() {
       <div className="max-w-7xl mx-auto px-6 flex items-center justify-between relative">
         
         {/* Logo */}
-        <Link to="/" className="flex items-center space-x-3">
-          <img src="/uploads/c.png" alt="Nutrizenix" className="w-40 md:w-56 h-auto object-contain" />
+        <Link to="/" className="flex items-center space-x-3 group relative">
+          <div className="absolute inset-0 bg-white/20 blur-xl rounded-full scale-150 opacity-50 group-hover:opacity-100 transition-opacity duration-500"></div>
+          <img 
+            src="/uploads/c.png" 
+            alt="Nutrizenix" 
+            className="w-32 md:w-44 h-auto object-contain drop-shadow-[0_0_15px_rgba(255,255,255,0.8)] relative z-10" 
+          />
         </Link>
 
         {/* Desktop Navigation */}

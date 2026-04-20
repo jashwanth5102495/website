@@ -23,7 +23,7 @@ export function Footer() {
               <img 
                 src="/uploads/c.png" 
                 alt="Nutrizenix" 
-                className="w-48 md:w-64 h-auto object-contain"
+                className="w-40 md:w-52 h-auto object-contain"
               />
             </div>
             <p className="text-gray-300 mb-6 max-w-md">
