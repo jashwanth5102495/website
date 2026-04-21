@@ -1,7 +1,6 @@
 import { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Menu, X, ArrowUpRight } from 'lucide-react';
-import { motion, AnimatePresence } from 'framer-motion';
+import { Menu, ArrowUpRight } from 'lucide-react';
 import { ThemeToggle } from './ThemeToggle';
 import { useTheme } from '../contexts/ThemeContext';
 
@@ -37,12 +36,14 @@ export function Navigation() {
       <div className="max-w-7xl mx-auto px-6 flex items-center justify-between relative">
         
         {/* Logo */}
-        <Link to="/" className="flex items-center space-x-3 group relative">
-          <div className="absolute inset-0 bg-white/20 blur-xl rounded-full scale-150 opacity-50 group-hover:opacity-100 transition-opacity duration-500"></div>
+        <Link
+          to="/"
+          className="absolute left-1/2 -translate-x-1/2 z-10 flex items-center md:static md:translate-x-0"
+        >
           <img 
             src="/uploads/c.png" 
             alt="Nutrizenix" 
-            className="w-24 md:w-32 h-auto object-contain drop-shadow-[0_0_15px_rgba(255,255,255,0.8)] relative z-10" 
+            className="w-32 md:w-32 h-auto object-contain animate-none transition-none drop-shadow-[0_0_22px_rgba(255,255,255,0.95)]" 
           />
         </Link>
 
@@ -75,52 +76,38 @@ export function Navigation() {
         </div>
 
         {/* Mobile Menu Button */}
-        <div className="md:hidden flex items-center space-x-4">
-            <Link
-              to="/contact"
-              className="flex items-center space-x-2 bg-orange-300 text-black px-4 py-2 rounded-full font-medium hover:bg-orange-400 transition-colors text-xs"
-            >
-              <span>Contact Us</span>
-              <ArrowUpRight className="w-3 h-3" />
-            </Link>
+        <div className="md:hidden ml-auto flex items-center space-x-4">
             <button
               onClick={() => setIsOpen(!isOpen)}
               className="text-white p-2"
             >
-              {isOpen ? <X /> : <Menu />}
+              <Menu />
             </button>
         </div>
       </div>
 
       {/* Mobile Navigation */}
-      <AnimatePresence>
-        {isOpen && (
-          <motion.div
-            initial={{ opacity: 0, height: 0 }}
-            animate={{ opacity: 1, height: 'auto' }}
-            exit={{ opacity: 0, height: 0 }}
-            className="md:hidden bg-black/95 border-t border-white/10"
-          >
-            <div className="p-4 space-y-4">
-              {navigationLinks.map((link) => (
-                <Link
-                  key={link.to}
-                  to={link.to}
-                  className="block text-white text-lg font-medium py-2"
-                >
-                  {link.label}
-                </Link>
-              ))}
+      {isOpen && (
+        <div className="md:hidden bg-white/10 backdrop-blur-xl border-t border-white/20">
+          <div className="p-4 space-y-4">
+            {navigationLinks.map((link) => (
               <Link
-                to="/contact"
-                className="block text-orange-300 text-lg font-medium py-2"
+                key={link.to}
+                to={link.to}
+                className="block text-white text-lg font-medium py-2"
               >
-                Contact Us
+                {link.label}
               </Link>
-            </div>
-          </motion.div>
-        )}
-      </AnimatePresence>
+            ))}
+            <Link
+              to="/contact"
+              className="block text-white text-lg font-medium py-2"
+            >
+              Contact Us
+            </Link>
+          </div>
+        </div>
+      )}
     </nav>
   );
 }
